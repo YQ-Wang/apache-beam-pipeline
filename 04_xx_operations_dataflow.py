@@ -5,7 +5,7 @@ import logging
 import apache_beam as beam
 
 #import pipeline options.
-from apache_beam.options.pipeline_options import  PipelineOptions
+from apache_beam.options.pipeline_options import PipelineOptions
 
 #Set log level to info
 root = logging.getLogger()
@@ -36,7 +36,7 @@ def printSize(PColl,PName):
                     >> beam.CombineGlobally(beam.combiners.CountCombineFn())
                 | 'Print Line Count for %s' % PName
                     >> beam.ParDo(lambda (c): logging.info('\nTotal Lines in %s = %s \n' , PName,c))  
-     )
+    )
 
 #--------------------------------------------------
 # 1.Read from a text file.
@@ -45,8 +45,8 @@ def printSize(PColl,PName):
 #Read the file from Google Cloud Storage
 transactions = ( plOps 
                 | 'Read Transaction CSV'
-                    >> beam.io.ReadFromText('gs://exercise-lil/data/sales_transactions.csv')
-                )
+                    >> beam.io.ReadFromText('gs://beam-pipeline-temp/data/sales_transactions.csv')
+               )
 
 printSize(transactions,'Raw Transactions')
 
