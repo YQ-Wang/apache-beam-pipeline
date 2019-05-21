@@ -110,7 +110,7 @@ custTypeCount = ( transactions
 		
 #Write output to a text file
 ( custTypeCount | 'Write to GS Text'
-	>> beam.io.WriteToText('gs://exercise-lil/data/customertype-summary.txt')
+	>> beam.io.WriteToText('gs://beam-pipeline-temp/data/customertype-summary.txt')
 )
 
 
