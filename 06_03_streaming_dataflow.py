@@ -19,7 +19,7 @@ plOps = beam.Pipeline(options=PipelineOptions())
 
 transactions= ( plOps 
                 | 'Read from pubsub'  
-                  >>  beam.io.ReadFromPubSub(subscription='projects/universal-code-210021/subscriptions/test-subscription')
+                  >>  beam.io.ReadFromPubSub(subscription='projects/beam-project-241218/subscriptions/test-subscription')
                 | 'Create Window'
                  >> beam.WindowInto(window.FixedWindows(5))
                 | 'Counting Lines ' 
