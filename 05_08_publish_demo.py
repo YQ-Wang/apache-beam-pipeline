@@ -6,7 +6,7 @@ import time
 publisher=pubsub.PublisherClient()
 
 #setup topic to publish to.
-topic='projects/universal-code-210021/topics/test-topic'
+topic='projects/beam-project-241218/topics/test-topic'
 
 #Publish to topic 10 times with a sleep in between for 2 seconds.
 for n in range(1,10):

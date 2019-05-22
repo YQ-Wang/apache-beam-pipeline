@@ -12,7 +12,7 @@ def callback(message):
     message.ack()
 
 #subscription to subscribe to
-subscription='projects/universal-code-210021/subscriptions/test-subscription'
+subscription='projects/beam-project-241218/subscriptions/test-subscription'
 
 #subscribe and hookup with callback function. Will be called everytime a 
 #new message comes in
